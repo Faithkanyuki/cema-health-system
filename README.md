@@ -158,3 +158,8 @@ Error Handling
 
 500 Internal Server Error: Unexpected server-side error.
 
+Testing
+You can run tests using pytest:
+
+Run Tests:
+pytest
