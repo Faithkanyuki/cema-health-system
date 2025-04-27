@@ -163,3 +163,13 @@ You can run tests using pytest:
 
 Run Tests:
 pytest
+
+
+Deployment
+Using Docker
+Build the Docker image:
+
+docker-compose build
+Run the container:
+docker-compose up
+the application will be accessible at http://localhost:5000
