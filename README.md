@@ -39,3 +39,12 @@ This will start the Flask server on http://localhost:5000.
 API Key (For Secure Access)
 
 The API requires an API key in the request header (X-API-Key). The default key is admin
+
+Running with Docker
+If you prefer to run the application with Docker:
+
+docker-compose build
+Run the Application
+docker-compose up
+This will start the application and map port 5000.
+
