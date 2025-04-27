@@ -151,4 +151,10 @@ json
   "notes": "First enrollment for Malaria"
 }
 
+Error Handling
+400 Bad Request: Invalid input data.
+
+404 Not Found: Resource not found (e.g., client or program not found).
+
+500 Internal Server Error: Unexpected server-side error.
 
