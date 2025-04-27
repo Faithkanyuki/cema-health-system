@@ -1,30 +1,28 @@
 # CEMA Health Information System
 
-A basic health information system for managing clients and health programs.
+A secure health information system API for managing clients and health programs.
 
 ## Features
-- Create health programs (TB, Malaria, HIV, etc.)
-- Register new clients
-- Enroll clients in programs
-- Search for clients
-- View client profiles with program enrollment
-- REST API for integration
+
+- **Program Management**: Create and view health programs (TB, Malaria, HIV, etc.)
+- **Client Management**: Register and search for clients
+- **Enrollment System**: Enroll clients in multiple programs
+- **Comprehensive Profiles**: View client details with enrollment history
+- **REST API**: JSON-based endpoints for easy integration
 
 ## Setup
 
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the application: `python app.py`
+### Local Development
+```bash
+# 1. Clone repository
+git clone https://github.com/yourusername/cema-health-system.git
+cd cema-health-system
 
-## API Endpoints
+# 2. Install dependencies
+pip install -r requirements.txt
 
-- `POST /programs` - Create a new health program
-- `GET /programs` - List all programs
-- `POST /clients` - Register a new client
-- `GET /clients?q=<search>` - Search clients
-- `GET /clients/<id>` - Get client profile
-- `POST /clients/<id>/programs` - Enroll client in program
+# 3. Initialize database
+python -c "from app import app, db; with app.app_context(): db.create_all()"
 
-## Deployment
-
-Using Docker:
+# 4. Run application
+python app.py
