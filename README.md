@@ -48,3 +48,107 @@ Run the Application
 docker-compose up
 This will start the application and map port 5000.
 
+
+API Endpoints
+
+Health Program Endpoints
+Create Program
+
+POST /programs
+Request Body:
+json
+
+{
+  "name": "Malaria",
+  "description": "Malaria Prevention Program"
+}
+Response:
+
+json
+{
+  "message": "Program created",
+  "id": 1
+}
+List Programs
+
+GET /programs
+
+Response:
+json
+
+[
+  {
+    "id": 1,
+    "name": "Malaria",
+    "description": "Malaria Prevention Program"
+  }
+]
+Client Endpoints
+Register Client
+
+POST /clients
+
+Request Body:
+
+json
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "date_of_birth": "1990-01-01",
+  "contact_info": "john@example.com"
+}
+Search Clients
+
+GET /clients?q=<search_term>
+
+Example: /clients?q=John
+
+Response:
+
+json
+
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "dob": "1990-01-01"
+  }
+]
+Get Client Profile
+
+GET /clients/<client_id>
+
+Response:
+
+json
+
+{
+  "id": 1,
+  "first_name": "John",
+  "last_name": "Doe",
+  "dob": "1990-01-01",
+  "contact_info": "john@example.com",
+  "programs": [
+    {
+      "id": 1,
+      "name": "Malaria",
+      "enrollment_date": "2025-04-01",
+      "notes": "Initial enrollment"
+    }
+  ]
+}
+Enroll Client in Program
+
+POST /clients/<client_id>/programs
+
+Request Body:
+
+json
+
+{
+  "program_id": 1,
+  "notes": "First enrollment for Malaria"
+}
+
+
