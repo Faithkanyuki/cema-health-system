@@ -173,3 +173,8 @@ docker-compose build
 Run the container:
 docker-compose up
 the application will be accessible at http://localhost:5000
+
+
+Data Security
+API Key: Secure endpoints by requiring an API key in the request headers to prevent unauthorized access.
+Input Validation: Strict validation for all input fields (e.g., name, date of birth) to ensure data integrity
