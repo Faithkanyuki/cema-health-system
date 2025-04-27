@@ -1,28 +1,41 @@
-# CEMA Health Information System
+Overview
+The CEMA Health Information System is a simple web-based application designed to manage health programs and client data. It provides essential functionalities such as program creation, client registration, program enrollment, and client search. The system also exposes a REST API to allow integration with other systems.
 
-A secure health information system API for managing clients and health programs.
+Features
+Create Health Programs: Manage programs such as TB, Malaria, HIV, etc.
+Register Clients: Register new clients with personal details.
+Enroll Clients in Programs: Link clients to health programs for monitoring and management.
+Search for Clients: Search for clients by name.
+Client Profiles: View detailed client profiles with their program enrollments.
+REST API Integration: Expose essential endpoints for program and client management.
 
-## Features
+Key Technologies
+Backend: Python, Flask
+Database: SQLite (SQLAlchemy ORM)
+Testing Framework: Pytest
+Docker: Containerization for deployment
 
-- **Program Management**: Create and view health programs (TB, Malaria, HIV, etc.)
-- **Client Management**: Register and search for clients
-- **Enrollment System**: Enroll clients in multiple programs
-- **Comprehensive Profiles**: View client details with enrollment history
-- **REST API**: JSON-based endpoints for easy integration
+Setup Instructions
+Prerequisites
+Ensure you have the following installed:
 
-## Setup
+Python 3.x
+pip
+Docker (optional, for containerized deployment)
 
-### Local Development
-```bash
-# 1. Clone repository
-git clone https://github.com/yourusername/cema-health-system.git
-cd cema-health-system
+Clone the Repository
+git clone <your-repository-url>
+cd CEMA-Health-
 
-# 2. Install dependencies
+Install Dependencies
 pip install -r requirements.txt
+Run the Application
 
-# 3. Initialize database
-python -c "from app import app, db; with app.app_context(): db.create_all()"
-
-# 4. Run application
+bash
+Copy
+Edit
 python app.py
+This will start the Flask server on http://localhost:5000.
+API Key (For Secure Access)
+
+The API requires an API key in the request header (X-API-Key). The default key is admin
