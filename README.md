@@ -1,4 +1,5 @@
 Overview
+
 The CEMA Health Information System is a simple web-based application designed to manage health programs and client data. It provides essential functionalities such as program creation, client registration, program enrollment, and client search. The system also exposes a REST API to allow integration with other systems.
 
 Features
